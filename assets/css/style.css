@@ -3,17 +3,47 @@
 /* common */
 
 :root{
-    --color-text: #4a4a4a;
-    --heading-main: #fdfbf7;
+    /* pc */
+    /* ====font colors==== */
+    --heading-main: #fdfbf7; 
     --heading-section: #2F2925;
+    --color-text: #4a4a4a;
+
+    /* ====colors==== */
+    --color-btn: #7a8f6a;
+    --color-btn-hover: #4f5e3e;
+    --color-faq: #fff6b8;
+
+    /* ====font size ==== */
+    --fs-h1: 4rem;
+    --fs-h2: 3.6rem;
+    --fs-h3: 2.8rem;
+    --fs-txt: 1.6rem;
+
+    /* ====layout ==== */
+    --container-width: 1120px;
+    --container-padding: 20px;
+    --section-space: 80px;
 
 
+    }
 
+    @media screen and (max-width: 768px) {
+        :root{
+            /* sp */
+            /* ====font size ==== */
+            --fs-h1: 2.8rem;
+            --fs-h2: 2.6rem;
+            --fs-h3: 2.4rem;
 
-    
-
-}
-
+            /* ==== layout ==== */
+            --container-padding: 16px;
+            --section-space: 40px;
+            
+            
+        }
+        
+    }
 
 
 html{
@@ -31,7 +61,7 @@ body{
 
 h1{
     font-family: "Shippori Mincho", serif;
-    font-size: 4rem;
+    font-size: var(--fs-h1);
     font-style: normal;
     font-weight: 500;
     color: var(--heading-main);
@@ -40,7 +70,7 @@ h1{
 
 h2{
     font-family: "Shippori Mincho", serif;
-    font-size: 3.6rem;
+    font-size: var(--fs-h2);
     font-style: normal;
     font-weight: 500;
     color: var(--heading-section);
@@ -49,12 +79,18 @@ h2{
 
 h3{
     font-family: "Shippori Mincho", serif;
-    font-size: 2.8rem;
+    font-size: var(--fs-h3);
     font-style: normal;
     font-weight: 500;
     color: var(--heading-section);
     line-height: 1.3;  
 }
 
+.container{
+    width: 100%;
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline:var(--container-padding);
+}
 
 
