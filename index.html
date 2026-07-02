@@ -1,108 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="スグ食べ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="スグ食べは最短で24時間以内に届く新鮮なオーガニック野菜宅配サービスです。"
+    />
+    <!-- ↓favicon -->
+    <link rel="icon" href="" />
     <title>スグ食べ</title>
 
     <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Noto+Sans+JP:wght@400&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Noto+Sans+JP:wght@400&family=Shippori+Mincho:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- css -->
-     <link rel="stylesheet" href="assets/css/destyle.css">
-     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/destyle.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
+  <body>
+    <!-- header nav-->
+    <header class="header">
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="assets/images/pc/logo-pc.svg" alt="" />
+        </a>
+      </div>
 
-</head>
-<body>
-    <!-- header navi -->
-    <header>
-
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#lead">わたしたちについて</a></li>
+          <li><a href="#reason">選ばれる3つの理由</a></li>
+          <li><a href="#cta">お試しセット</a></li>
+          <li><a href="#quality">品質保証</a></li>
+          <li><a href="#farmers">農家さんの紹介</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+        </ul>
+      </nav>
     </header>
-
     <main>
-        <!-- メインビジュアル -->
-        <section class="mv">
-            <div class="container">
+      <!-- メインビジュアル -->
+      <section class="mv">
+        <div class="container">
+          <img src="assets/images/pc/mv-pc.jpg" alt="メインビジュアル" />
+          <h1 class="mv__catchCopy">
+            こだわり農家の<br class="pcBr" />
+            朝どりオーガニック野菜をご自宅で
+          </h1>
+          <p class="mv__txt">FromFarmtoHome,Naturally</p>
+          <!-- btn -->
+          <a href="#cta" class="mv__btn">
+            <span class="mv__btn--budge">初回<br />限定</span>
 
-            </div>
-        </section>
+            <span class="mv__btn--txt">ご注文はこちら</span>
 
-        <!-- 悩み -->
-        <section class="problem">
-            <div class="container">
+            <span class="mv__btn--arrow">
+              <img src="assets/images/pc/btnarrow-pc.png" alt=""
+            /></span>
+          </a>
+        </div>
+      </section>
 
-            </div>
+      <!-- 悩み -->
+      <section class="problem">
+        <div class="container">
+          <h2>野菜選びでこんなお悩みありませんか？</h2>
+          <img src="assets/images/pc/contents-pc.jpg" alt="" />
+          <p>そのお悩み、お任せください</p>
+        </div>
+      </section>
 
-        </section>
+      <!-- スグ食べの説明 -->
+      <section id="lead" class="lead">
+        <div class="container"></div>
+      </section>
 
-        <!-- スグ食べの説明 -->
-        <section class="lead">
-            <div class="container">
+      <!-- 3つの理由 -->
+      <section id="reason" class="reason">
+        <div class="container"></div>
+      </section>
 
-            </div>
+      <!-- cta -->
+      <section id="cta" class="cta">
+        <div class="container"></div>
+      </section>
 
-        </section>
+      <!-- 品質保証 -->
+      <section id="quality" class="quality">
+        <div class="container"></div>
+      </section>
 
-        <!-- 3つの理由 -->
-        <section class="reason">
-            <div class="container">
+      <!-- 農家さんの紹介 -->
+      <section id="farmers" class="farmers">
+        <div class="container"></div>
+      </section>
 
-            </div>
+      <!-- よくある質問 -->
+      <section id="faq" class="faq">
+        <div class="container"></div>
+      </section>
 
-        </section>
-
-        <!-- cta -->
-        <section class="cta">
-            <div class="container">
-
-            </div>
-
-        </section>
-
-        <!-- 品質保証 -->
-        <section class="quality">
-            <div class="container">
-
-            </div>
-
-        </section>
-
-        <!-- 農家さんの紹介 -->
-        <section class="farmers">
-            <div class="container">
-
-            </div>
-
-        </section>
-
-        <!-- よくある質問 -->
-        <section class="faq">
-            <div class="container">
-
-            </div>
-
-        </section>
-
-        <!-- cta コピペする-->
-        <section class="cta">
-
-        </section>
+      <!-- cta コピペする-->
+      <section id="cta" class="cta"></section>
     </main>
 
     <footer></footer>
 
-<!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
 
-<!-- gsap -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
 
- <!-- javascript -->
-<script src="assets/js/main.js"></script>
-</body>
+    <!-- javascript -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
