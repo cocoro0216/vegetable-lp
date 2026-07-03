@@ -22,7 +22,7 @@ gsap.registerPlugin(ScrollTrigger)
 // jquery
 // =================================================
     $(function(){
-        // sp　ハンバーガーメニュー５で実装
+        // sp　ハンバーガー
     $('.btn-trigger').on('click', function() {
             $(this).toggleClass('active');
         return false;

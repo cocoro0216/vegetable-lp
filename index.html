@@ -25,15 +25,40 @@
   </head>
 
   <body>
-    <!-- header nav-->
+    <!-- header sp-->
     <header class="header">
       <div class="header__logo">
         <a href="index.html">
-          <img src="assets/images/pc/logo-pc.svg" alt="" />
+          <img src="assets/images/sp/logo-sp.png" alt="" />
         </a>
-      </div>
 
+        <div class="btn-trigger" id="btn05">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- sp-nav -->
       <nav class="header__nav">
+        <div class="header__nav-inner">
+          <div class="header__nav-logo">
+            <a href="index.html"
+              ><img src="assets/images/sp/logo-sp.png" alt=""
+            /></a>
+          </div>
+
+          <ul class="sp__nav">
+            <li><a href="#lead">わたしたちについて</a></li>
+            <li><a href="#reason">選ばれる3つの理由</a></li>
+            <li><a href="#cta">お試しセット</a></li>
+            <li><a href="#quality">品質保証</a></li>
+            <li><a href="#farmers">農家さんの紹介</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- pc<nav class="header__nav">
         <ul>
           <li><a href="#lead">わたしたちについて</a></li>
           <li><a href="#reason">選ばれる3つの理由</a></li>
@@ -42,21 +67,45 @@
           <li><a href="#farmers">農家さんの紹介</a></li>
           <li><a href="#faq">よくある質問</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
     <main>
       <!-- メインビジュアル -->
-      <section class="mv">
+      <!-- sp -->
+      <section class="mv mv--sp">
         <div class="container">
-          <img src="assets/images/pc/mv-pc.jpg" alt="メインビジュアル" />
+          <img src="assets/images/sp/mv-sp.jpg" alt="新鮮なオーガニック野菜" />
           <h1 class="mv__catchCopy">
-            こだわり農家の<br class="pcBr" />
-            朝どりオーガニック野菜をご自宅で
+            こだわり農家の<br />
+            朝どりオーガニック野菜を<br />
+            ご自宅で
           </h1>
-          <p class="mv__txt">FromFarmtoHome,Naturally</p>
+          <p class="mv__txt">From Farm to Home,Naturally</p>
           <!-- btn -->
           <a href="#cta" class="mv__btn">
-            <span class="mv__btn--budge">初回<br />限定</span>
+            <span class="mv__btn--badge">初回<br />限定</span>
+
+            <span class="mv__btn--txt">ご注文はこちら</span>
+
+            <span class="mv__btn--arrow">
+              <img src="assets/images/sp/btnarrow-sp.png" alt=""
+            /></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- pc -->
+      <!-- <section class="mv mv--pc">
+        <div class="container">
+          <img src="assets/images/pc/mv-pc.jpg" alt="新鮮なオーガニック野菜" />
+          <h1 class="mv__catchCopy">
+            こだわり農家の<br />
+            朝どりオーガニック野菜をご自宅で
+          </h1>
+          <p class="mv__txt">From Farm to Home,Naturally</p> -->
+      <!-- btn -->
+      <!-- <a href="#cta" class="mv__btn">
+            <span class="mv__btn--badge">初回<br />限定</span>
 
             <span class="mv__btn--txt">ご注文はこちら</span>
 
@@ -65,13 +114,29 @@
             /></span>
           </a>
         </div>
-      </section>
+      </section> -->
 
       <!-- 悩み -->
       <section class="problem">
         <div class="container">
           <h2>野菜選びでこんなお悩みありませんか？</h2>
-          <img src="assets/images/pc/contents-pc.jpg" alt="" />
+
+          <ul class="problem__list">
+            <li class="problem__txt">
+              <img src="assets/images/sp/problem1.jpg" alt="" />
+              <p>忙しくて<br />買い物に行けない</p>
+            </li>
+
+            <li class="problem__txt">
+              <img src="assets/images/sp/problem2.jpg" alt="" />
+              <p>栄養バランスまで<br />手が回らない</p>
+            </li>
+            <li class="problem__list">
+              <img src="assets/images/sp/problem3.jpg" alt="" />
+              <p>本当に安全な野菜か<br />不安</p>
+            </li>
+          </ul>
+
           <p>そのお悩み、お任せください</p>
         </div>
       </section>
@@ -119,7 +184,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- gsap -->
+    <!-- g sap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
 

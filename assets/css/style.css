@@ -3,40 +3,52 @@
 /* common */
 
 :root{
-    /* pc */
+    /* sp */
     /* ====font colors==== */
     --heading-main: #fdfbf7; 
     --heading-section: #2F2925;
     --color-text: #4a4a4a;
 
-    /* ====colors==== */
-    --color-btn: #7a8f6a;
-    --color-btn-hover: #4f5e3e;
+    /* ====btn colors==== */
+    /* btn1 */
+    --color-btn-green: #fdfbf7cc;
+    --color-btn-green-hover: #4f5e3ecc;
+    --color-btn-green-txt: #4a4038;
+    --color-btn-green-txt-hover: #f8f6f2;
+    /* btn2 */
+    --color-btn-orange: #fff6b8;
+    --color-btn-orange-hover: #d98c4a;
+    --color-btn-orange-txt: #3f4b36;
+
+    /* faq */
     --color-faq: #fff6b8;
 
     /* ====font size ==== */
-    --fs-h1: 4rem;
-    --fs-h2: 3.6rem;
-    --fs-h3: 2.8rem;
-    --fs-txt: 1.6rem;
-
+    --fs-h1: 2.8rem;
+    --fs-h2: 2.6rem;
+    --fs-h3: 2.4rem;
+    
     /* ====layout ==== */
-    --container-width: 1120px;
-    --container-padding: 20px;
-    --section-space: 80px;
+    --container-width: 343px;
+    --container-padding: 16px;
+    --section-space: 40px;
+
+    
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 769px) {
         :root{
-            /* sp */
+            /* pc */
             /* ====font size ==== */
-            --fs-h1: 2.8rem;
-            --fs-h2: 2.6rem;
-            --fs-h3: 2.4rem;
+            --fs-h1: 4rem;
+            --fs-h2: 3.6rem;
+            --fs-h3: 2.8rem;
+            --fs-txt: 1.6rem;
 
             /* ==== layout ==== */
-            --container-padding: 16px;
-            --section-space: 40px;
+            --container-width: 1120px;
+            --container-padding: 20px;
+            --section-space: 80px;
         }    
     }
 
@@ -87,4 +99,87 @@ h3{
     padding-inline:var(--container-padding);
 }
 
+/*=============================
+.btn-trigger
+=============================*/
+.btn-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+  cursor: pointer;
+}
+.btn-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #2f2925;
+  border-radius: 4px;
+}
+.btn-trigger, .btn-trigger span {
+  display: inline-block;
+  transition: all .5s;
+  box-sizing: border-box;
+}
+.btn-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.btn-trigger span:nth-of-type(2) {
+  top: 20px;
+}
+.btn-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
 
+/*=============================
+#btn
+=============================*/
+#btn05.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+}
+#btn05.active span:nth-of-type(2) {
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: active-btn05-bar02 .8s forwards;
+  animation: active-btn05-bar02 .8s forwards;
+}
+@-webkit-keyframes active-btn05-bar02 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-btn05-bar02 {
+  100% {
+    height: 0;
+  }
+}
+#btn05.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+}
+
+
+/* mv */
+.mv .container{
+    max-width: 100%;
+    padding-inline: 0;
+}
+.mv--sp{
+    display: block;
+}
+.mv--pc{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .mv--sp{
+    display: none;
+}
+    .mv--pc{
+    display: block;
+}
+
+
+    
+}
