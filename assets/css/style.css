@@ -159,6 +159,13 @@ h3{
   transform: translateY(-20px) rotate(45deg);
 }
 
+/*=============================
+reason
+=============================*/
+.pcBr{
+    display: none;
+}
+
 
 /* mv */
 .mv .container{
