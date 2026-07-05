@@ -23,6 +23,10 @@
     /* faq */
     --color-faq: #fff6b8;
 
+    /* bg */
+    --color-bg: #fcfbf8;
+
+
     /* ====font size ==== */
     --fs-h1: 2.8rem;
     --fs-h2: 2.6rem;
@@ -30,7 +34,7 @@
     
     /* ====layout ==== */
     --container-width: 343px;
-    --container-padding: 16px;
+    --container-padding: 4.2%;
     --section-space: 40px;
 
     
@@ -62,7 +66,7 @@ body{
     font-style: normal;
     font-weight: 400;
     color:var(--color-text);
-    background-color: #fcfbf8;
+    background-color:var(--color-bg);
     line-height: 1.6;
 
 }
@@ -71,7 +75,7 @@ h1{
     font-family: "Shippori Mincho", serif;
     font-size: var(--fs-h1);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--heading-main);
     line-height: 1.3;
 }
@@ -112,82 +116,142 @@ header
     align-items: center;
 }
 
-
-
 /*=============================
-.btn-trigger
+sp-nav
 =============================*/
-.btn-trigger {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-}
-.btn-trigger span {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 24px;
-  height: 2px;
-  background-color: #2f2925;
-  border-radius: 4px;
-}
-.btn-trigger, .btn-trigger span {
-  display: inline-block;
-  transition: all .5s;
-  box-sizing: border-box;
-}
-.btn-trigger span:nth-of-type(1) {
-  top: 14px;
-}
-.btn-trigger span:nth-of-type(2) {
-  top: 21px;
-}
-.btn-trigger span:nth-of-type(3) {
-  top: 28px;
-}
+.header__nav {
+  background-color:var(--color-bg);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.4s;
 
-/*=============================
-#btn
-=============================*/
-#btn05.active span:nth-of-type(1) {
-  -webkit-transform: translateY(7px) rotate(-45deg);
-  transform: translateY(7px) rotate(-45deg);
-}
-#btn05.active span:nth-of-type(2) {
-  left: 50%;
-  opacity: 0;
-  -webkit-animation: active-btn05-bar02 .8s forwards;
-  animation: active-btn05-bar02 .8s forwards;
-}
-@-webkit-keyframes active-btn05-bar02 {
-  100% {
-    height: 0;
   }
+
+.header__nav.active {
+  transform: translateX(0);
+
 }
-@keyframes active-btn05-bar02 {
-  100% {
-    height: 0;
-  }
+.header__nav-inner {
+  padding: var(--container-padding);
+
 }
-#btn05.active span:nth-of-type(3) {
-  -webkit-transform: translateY(-7px) rotate(45deg);
-  transform: translateY(-7px) rotate(45deg);
+.header__nav-logo {
+    margin-block: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.sp__nav {
+    margin-top: 80px;
+    position: absolute;
+    top: 80px;
+    font-family: "Shippori Mincho";
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.sp__nav li + li {
+    margin-top: 56px;
 }
 
 /*=============================
-reason
+mv
 =============================*/
-.pcBr{
-    display: none;
-}
-
-
-/* mv */
 .mv .container{
     max-width: 100%;
     padding-inline: 0;
+    position: relative;
 }
+.mv__catchCopy {
+    position: absolute;
+    top: 352px;
+    left: var(--container-padding);
+    right: var(--container-padding);
+    letter-spacing: 0.02em;
+}
+.mv__catchCopy span {
+    display: block;
+    white-space: nowrap;
+}
+
+.mv__catchCopy span+span {
+    margin-top: 16px;
+}
+
+.mv__txt {
+    position: absolute;
+    top: 510px;
+    left: var(--container-padding);
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fdfbf7;
+    line-height: 1;
+    letter-spacing: 0.03em;
+}
+.mv__btn {
+    position: absolute;   
+    left: 198px;
+    bottom: 24px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--color-btn-green);
+    border-radius: 10px;
+    height: 64px;
+    width: 168px;
+    padding: 8px;
+
+}
+.mv__btn--badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f6f2;
+
+    font-family: "Shippori Mincho";
+    font-size: 1rem;
+    font-weight: 400;
+    color:var(--color-text);
+    line-height: 1.2;
+
+
+}
+.mv__btn--txt {
+    font-family: "Shippori Mincho";
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:var(--color-btn-green-txt);
+    line-height: 1.2;
+    margin: 21px 8px 21px 2px;
+    white-space: nowrap;
+
+}
+.mv__btn--arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
 .mv--sp{
     display: block;
 }
@@ -201,8 +265,13 @@ reason
 }
     .mv--pc{
     display: block;
+}    
 }
 
-
-    
+/*=============================
+reason
+=============================*/
+.pcBr{
+    display: none;
 }
+

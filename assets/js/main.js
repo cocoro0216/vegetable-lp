@@ -22,12 +22,14 @@ gsap.registerPlugin(ScrollTrigger)
 // jquery
 // =================================================
     $(function(){
-        // sp　ハンバーガー
-    $('.btn-trigger').on('click', function() {
-            $(this).toggleClass('active');
+        // sp-nav
+    $('.header__btn').on('click', function() {
+            $('.header__nav').toggleClass('active');
         return false;
   });
     });
+
+   
 
 
     // アコーディオンの設定
