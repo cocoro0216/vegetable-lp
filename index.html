@@ -283,7 +283,7 @@
 
       <!-- cta -->
       <section id="cta" class="cta">
-        <div class="container">
+        
           <div class="cta__topic">
             <p class="cta__message">
               自信があるから、<br />
@@ -292,6 +292,7 @@
             <h2>１回限り！少量お試しセット</h2>
           </div>
           <div class="cta__cards">
+            <div class="container">
             <article class="cta__card">
               <img class="cta__img--vegics"
                 src="assets/images/sp/vegics-sp.jpg"
@@ -346,20 +347,23 @@
                 </a>
               </div>
             </article>
-          </div>
-        </div>
+            <!-- </div> -->
+          </div> 
       </section>
 
       <!-- 品質保証 -->
       <section id="quality" class="quality">
-        <div class="container">
-          <div class="quality__topic">
-            <p class="quality__topic--txt">スグ食べの</p>
-            <h2>品質保証</h2>
-          </div>
 
-          <div class="quality__top">
-            <div class="quality__person">
+        <div class="container">
+          <div class="quality__contents">
+            <p class="quality__topic--txt">スグ食べの</p>
+            <h2 class="quality__topic">品質保証</h2>
+          </div>
+        </div>
+
+          <div class="quality__inner">
+            <div class="container">
+            <div class="quality__top">
               <div class="quality__balloon">
                 <img src="assets/images/sp/balloon.png" alt="" />
                 <p>実物を見ずに<br />商品を購入するのは不安...</p>
@@ -367,53 +371,66 @@
 
               <img
                 class="quality__woman"
-                src="assets/images/sp/woman-sp.png"
+                src="assets/images/sp/woman-sp-n.png"
                 alt="悩んでいる女性"
               />
+            </div>
             </div>
           </div>
 
           <div class="quality__message">
             <p class="quality__catch">ご安心ください！</p>
 
-            <p>
+            <p class="quality__catchTxt">
               商品に不備があった際には<br />
               スグ食べが
             </p>
 
-            <p>
-              <strong class="quality__emphasis">”全額”返金</strong>
+            <p class="quality__emphasis">
+              <strong >”全額”返金</strong>
             </p>
 
-            <p>対応いたします</p>
+            <p class="quality__emphasisTxt">対応いたします</p>
           </div>
 
           <div class="quality__content">
+            
             <div class="quality__img">
               <img src="assets/images/sp/vege-sp.png" alt="全額返金保証" />
             </div>
 
             <div class="quality__txt">
+              <div class="container">
               <p>
-                スグ食べに出品している農家さんたちは、
+                スグ食べに出品している農家さんたちは、<br>
                 「大切に育てた自慢の農作物を、できるだけ
                 美味しい状態で食べてもらいたい。」<br />
-
-                そんな想いを持った農家さんばかりです。
-                そのため、収穫から梱包・出荷にいたるまでしっかりと<br
-                  class="pcBr"
-                />
-                品質管理されています。 とはいえ、実物を見ずに野菜や果物を
-                購入するのは<br class="pcBr" />ちょっと不安…<br />
-
-                そんな方にも安心して ご購入いただけるよう、スグ食べでは
-                品質保証をお約束しています。
-                万が一届いた商品に不備があった際には、
-                スグ食べにて全額返金対応いたします。
               </p>
+
+                <p>そんな想いを持った農家さんばかりです。
+                </p>
+
+                <p>そのため、収穫から梱包・出荷にいたるまで
+                  しっかりと<br
+                  class="pcBr"/>
+                品質管理されています。
+                </p> 
+
+                <p>とはいえ、実物を見ずに野菜や果物を<br>
+                購入するのは<br class="pcBr" />ちょっと不安…<br />
+                </p>
+
+                <p>そんな方にも安心して<br> 
+                  ご購入いただけるよう、スグ食べでは
+                品質保証をお約束しています。
+                </p>
+
+                <p class="quality__last">万が一届いた商品に不備があった際には、
+                スグ食べにて全額返金対応いたします。
+                </p>
+            </div>
             </div>
           </div>
-        </div>
       </section>
 
       <!-- 農家さんの紹介 -->
@@ -424,7 +441,7 @@
             <h2>私たちの野菜、こんなにおいしいんです</h2>
           </div>
 
-          <img src="assets/images/sp/farmersvege-sp.png" alt="" />
+          <img class="farmers__vegetable" src="assets/images/sp/farmersvege-sp.png" alt="" />
 
           <div class="farmers__cards">
             <article class="farmers__item">
@@ -433,8 +450,8 @@
                 src="assets/images/sp/farmer1-sp.jpg"
                 alt="ひだまり農場の農家さん"
               />
-              <p class="farmers__txt">ひだまり農場（岡山県）山田洋一さん</p>
-              <p>
+              <p class="farmers__name">ひだまり農場（岡山県）<br>山田洋一さん</p>
+              <p class="farmers__txt">
                 「ひだまり農場」では栽培期間中に 農薬・化学肥料を一切使用せず、
                 年間約100種類の野菜と米、卵を 生産しています。
                 堆肥・肥料もすべて手作りし、 有機質のものを使用しています。
@@ -447,8 +464,8 @@
                 src="assets/images/sp/farmer2-sp.jpg"
                 alt="爽緑農園の農家さん"
               />
-              <p class="farmers__txt">爽緑農園（愛媛県）太田紘一さん</p>
-              <p>
+              <p class="farmers__name">爽緑農園（愛媛県）<br>太田紘一さん</p>
+              <p class="farmers__txt-last">
                 「爽緑農園」では農薬や除草剤は
                 一切使用せず、一つ一つのお野菜を丁寧に栽培しています。
                 お日様の光をたくさん浴びて育った
@@ -464,7 +481,7 @@
         <div class="container">
           <div class="faq__topic">
             <h2>FAQ</h2>
-            <p class="faq__txt">よくある質問</p>
+            <p class="faq__topicTxt">よくある質問</p>
           </div>
           <!-- q1 -->
           <div class="faq__item">
@@ -533,7 +550,7 @@
 
       <!-- cta -->
       <section id="cta" class="cta">
-        <div class="container">
+        
           <div class="cta__topic">
             <p class="cta__message">
               自信があるから、<br />
@@ -542,6 +559,7 @@
             <h2>１回限り！少量お試しセット</h2>
           </div>
           <div class="cta__cards">
+            <div class="container">
             <article class="cta__card">
               <img class="cta__img--vegics"
                 src="assets/images/sp/vegics-sp.jpg"
@@ -596,8 +614,8 @@
                 </a>
               </div>
             </article>
+            </div>
           </div>
-        </div>
       </section>
     </main>
 
