@@ -109,6 +109,7 @@ h3{
 header
 =============================*/
 .header{
+    width: 100%;
     padding-block: 24px;
 }
 .header__logo{
@@ -123,7 +124,7 @@ sp-nav
 .header__nav {
   background-color:var(--color-bg);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -260,6 +261,10 @@ mv＿＿btn
     align-items: center;
 }
 .mv__btn--arrow img {
+    display: block;
+    max-width: 100%;
+    height: 0;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -313,6 +318,9 @@ problem
 }
 .problem__item img {
     display: block;
+    max-width: 100%;
+    height: auto;
+
     margin: 0 auto;
     position: relative;
     z-index: 0;    
@@ -412,6 +420,13 @@ reason
     white-space: nowrap;
 }
 .reason__item img {
+    display: block;
+
+    width: 100%;
+    max-width: 343px;
+
+    height: auto;
+
     margin-top: 32px;
 }
 .reason__content h3 {
@@ -430,6 +445,10 @@ cta
     margin-top: 40px;
     padding-bottom: 40px;
     background: url(../images/sp/cta-bg.jpg);
+}
+.cta__card {
+    width: 100%;
+    max-width:var(--container-width);
 }
 .cta__topic {
     width: 100%;
@@ -465,19 +484,22 @@ cta
 }
 .cta__img--vegics {
     width: 100%;
+    max-width: 311px;
+
     margin-top: 32px;
 }
 .cta__img--kuchibue {
     width: 100%;
+    max-width: 100%;
+
     margin-top: 24px;
 }
 .cta__content {
     width: 100%;
-    height: 254px;
     background-color: var(--color-content-bg);
 
     text-align: center;
-    padding-top: 16px;
+    padding-block: 16px 24px;
 
 }
 .cta__farm {
@@ -523,18 +545,14 @@ cta-btn
     justify-content: center;
     align-items: center;
 
-    margin: 0 auto;
+    margin: 24px auto 0;
 
     background-color: var(--color-btn-orange);
     border-radius: 10px;
     height: 64px;
     width: 272px;
 
-    margin: 24px;
-
     transition: background-color .3s ease, .3s ease;
-
-
 
 }
 .cta__btn--badge {
@@ -560,7 +578,7 @@ cta-btn
     color:var(--color-btn-orange-txt);
     line-height: 1.2;
 
-    margin: 21px 32px 21px 16px;
+    margin: 0 32px 0 16px;
 
     white-space: nowrap;
 }
@@ -613,6 +631,10 @@ quality
     margin-left: calc(50% -50vw);
 }
 .quality__balloon img {
+    display: block;
+
+    height: auto;
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -712,6 +734,12 @@ farmer
 }
 .farmers__item img {
     display: block;
+
+    width: 100%;
+    max-width: 343px;
+
+    height: auto;
+
     margin: 24px auto;
 }
 .farmers__name {
@@ -768,6 +796,8 @@ faq-question
     margin-top: 24px;
 }
 .faq__question {
+    width: 100%;
+
     display: flex;
     align-items: center;
 }
@@ -813,7 +843,8 @@ faq-answer
     align-items: flex-start;
     gap: 16px;
 
-    width: 343px;
+    width: 100%;
+
     background: var(--color-btn-orange);
 
     margin-top: 24px;
@@ -831,22 +862,14 @@ faq-answer
 
 }
 
-
-
-    
-
-
-
-
-
-
-
-
 /*=============================
 footer
 =============================*/
 .footer__group img {
     display: block;
+    max-width: 100%;
+    height: auto;
+
     margin: 40px auto 0;
 }
 .footer__txt {

@@ -166,8 +166,6 @@ gsap.from(".faq", {
     });
 
    
-
-
     // アコーディオンの設定
     $(function(){
   $('.faq__item .faq__question').click(function(){
