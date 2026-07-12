@@ -411,6 +411,10 @@ lead
 /*=============================
 reason
 =============================*/
+.reason .container {
+    max-width: none;
+    padding-inline: 16px;
+}
 .pcBr{
     display: none;
 }
@@ -423,11 +427,36 @@ reason
     display: block;
 
     width: 100%;
-    max-width: 343px;
 
     height: auto;
 
     margin-top: 32px;
+
+    position: relative;
+}
+.reason__number {
+    font-family: "lora";
+    font-size: 3rem;
+    font-weight: 500;
+    color:var(--heading-section);
+    line-height: 1;
+
+    position: absolute;
+    top: -24px;
+    left: 2px;
+
+    width: 88px;
+    aspect-ratio: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e7eee1;
+    border-radius: 48% 52% 67% 33%/ 52% 48% 52% 48% ;
+
+    z-index: 1;
+
 }
 .reason__content h3 {
     margin-top: 32px;
@@ -438,6 +467,9 @@ reason
 .reason__content h3 {
     white-space: nowrap;
 }
+
+
+
 /*=============================
 cta
 =============================*/
@@ -698,6 +730,7 @@ quality
 }
 .quality__img {
     margin: 0 auto;
+    text-align: center;
 }
 .quality__txt {
     font-family: "Shippori Mincho";
@@ -775,6 +808,10 @@ faq-question
     display: flex;
     align-items: center;
 }
+.faq__topic .faq__icon {
+    margin-left: 16px;
+}
+
 .faq__content {
     display: flex;
     align-items: flex-start;
@@ -824,7 +861,7 @@ faq-question
 
     line-height: 1;
 
-    margin-left: 24px;
+    margin-left: 32px;
     margin-right: 108px;
 
 }
@@ -832,18 +869,19 @@ faq-question
     width: 24px;
     height: 24px;
 
-    margin: 32px 16px 32px 0;
+    flex-shrink: 0;
+
 }
 /*=============================
 faq-answer
 =============================*/
 .faq__answer {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-
     width: 100%;
+    display:flex;
+    align-items: flex-start;
+    gap: 24px;
+
+    
 
     background: var(--color-btn-orange);
 
@@ -852,13 +890,39 @@ faq-answer
 
     display: none;
 }
+.faq__body {
+    flex: 1;
+}
+.faq__head {
+    display: flex;
+    align-items: baseline;
+    gap: 32px;
+
+}
+
 .faq__content .faq__label {
     width: 24px;
     margin: 0 0 0 18px;
 }
 .faq__answerTxt {
+    flex: 1;
     line-height: 1.8;
     text-align: left;
+
+}
+.faq__icon--first {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 20px;
+
+}
+.faq__icon--second {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 10px;
+
 
 }
 
