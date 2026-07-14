@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 // MV
-gsap.from(".mv__catchCopy", {
+gsap.from(".mv__catchCopy--sp", {
   opacity: 0,
   y: 30,
   duration: 1,
@@ -15,7 +15,7 @@ gsap.from(".mv__catchCopy", {
 
 });
 
-gsap.from(".mv__txt", {
+gsap.from(".mv__txt--sp", {
   opacity: 0,
   y: 30,
   duration: 1,
@@ -26,7 +26,7 @@ gsap.from(".mv__txt", {
 // CTA
 
 gsap.from(".mv__btn", {
-  scrollTrigger: ".mv__btn" ,
+  scrollTrigger: ".mv__btn--sp" ,
   opacity: 0,
   y: 40,
   duration: 0.8,
@@ -53,7 +53,7 @@ gsap.from(".problem", {
 
 });
 
-gsap.from("problem__item", {
+gsap.from(".problem__item", {
   scrollTrigger:".problem", 
   opacity: 0,
   y: 30,
@@ -166,7 +166,7 @@ gsap.from(".faq", {
     });
 
    
-    // アコーディオンの設定
+  
     $(function(){
   $('.faq__item .faq__question').click(function(){
     $(this).next('.faq__answer').slideToggle();

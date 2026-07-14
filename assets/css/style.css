@@ -34,8 +34,8 @@
     --fs-h3: 2.4rem;
     
     /* ====layout ==== */
-    --container-width: 343px;
-    --container-padding: 4.2%;
+    --container-width: 375px;
+    --container-padding: 16px;
     --section-space: 40px;
 
     
@@ -104,6 +104,7 @@ h3{
     max-width: var(--container-width);
     margin-inline: auto;
     padding-inline:var(--container-padding);
+    box-sizing: border-box;
 }
 /*=============================
 header
@@ -117,6 +118,181 @@ header
     justify-content: space-between;
     align-items: center;
 }
+.header__logo .header__icon {
+    width: 113px;
+    height: auto;
+    display: block;
+}
+/*=============================
+header-pc
+=============================*/
+@media screen and (min-width: 769px) {
+    .mv--sp{
+    display: none;
+}
+    .mv--pc{
+    display: block;
+    flex: 1;
+}    
+    .mv--pc .container {
+        position: relative;
+    }
+    
+    .header--pc {
+        flex: 0 0 147px;
+        position: fixed;
+        z-index: 1;
+
+        top: 48px;
+        left: 16px;
+    }
+    .header__nav--pc li {
+        margin-top: 40px;
+
+        font-family: "Shippori MIncho";
+        font-size: 1.6rem;
+        color:var(--color-text);
+        line-height: 1;
+
+    }
+
+    .header__nav--pc li :first-child {
+        margin-top: 80px;
+
+    }
+    
+    .mv__catchCopy--pc {
+    position: absolute;
+
+    display: block;
+    white-space: nowrap;
+
+    top: 496px;
+    left: 40px;
+
+    letter-spacing: 0.03em;
+
+    line-height: 1.2;
+
+
+    }
+
+    .mv__catchCopy--pc span {
+        display: block;
+    }
+
+    .mv__catchCopy--pc span+span {
+        margin-top: 24px;
+    } 
+
+
+    .mv__txt--pc {
+        position: absolute;
+        top: 656px;
+        left: 40px;
+
+        font-size: 1.6rem;
+        color: #fdfbf7;
+        line-height: 1;
+        letter-spacing: 0.03em;
+
+
+
+    }
+    /*=============================
+    btn
+    =============================*/
+
+    .mv__btn--pc {
+        position: absolute;   
+        left: 984px;
+        bottom: 24px;
+
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+
+        background-color: var(--color-btn-green);
+        border-radius: 5px;
+        height: 80px;
+        width: 240px;
+        padding: 16px;
+
+        transition: background-color .3s ease, color .3s ease;
+
+
+    }
+
+    .mv__btn--badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f8f6f2;
+
+    font-family: "Shippori Mincho";
+    font-size: 1.6rem;
+    font-weight: 400;
+    color:var(--color-text);
+    line-height: 1.2;
+
+
+}
+.mv__btn--txtPc {
+    font-family: "Shippori Mincho";
+    font-size: 1.6rem;
+    font-weight: 400;
+    color:var(--color-btn-green-txt);
+    line-height: 1.2;
+    margin: 31px 29px 30px 8px;
+    white-space: nowrap;
+
+}
+.mv__btn--arrowPc {
+    position: relative;
+    width: 14px;
+    height: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mv__btn--arrowPc img {
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+.arrow-hover {
+    display: none;
+}
+.mv__btn--pc:hover .arrow-default {
+    display: none;
+}
+.mv__btn--pc:hover .arrow-hover {
+    display: block;
+}
+
+.mv__btn--pc:hover {
+    background-color: var(--color-btn-green-hover);
+
+}
+.mv__btn--pc:hover .mv__btn--txtPc {
+    color: var(--color-btn-green-txt-hover);
+}
+.mv--sp{
+    display: none;
+}
+.mv--pc{
+    display: block;
+}
+    
+}
+
+
 
 /*=============================
 sp-nav
@@ -148,6 +324,12 @@ sp-nav
     justify-content: space-between;
     align-items: center;
 }
+.header__nav-logo .header__icon {
+    width: 113px;
+    height: auto;
+    display: block;
+    
+}
 .header__btn {
     background: transparent;
     border: none;
@@ -170,30 +352,32 @@ sp-nav
 /*=============================
 mv
 =============================*/
-.mv .container{
-    max-width: 100%;
-    padding-inline: 0;
+.mv.mv--sp {
     position: relative;
 }
-.mv__catchCopy {
+.mv.mv--sp img {
+    width: 100%;
+}
+
+.mv__catchCopy--sp {
     position: absolute;
-    top: 352px;
+    top: 409px;
     left: var(--container-padding);
     right: var(--container-padding);
     letter-spacing: 0.02em;
 }
-.mv__catchCopy span {
+.mv__catchCopy--sp span {
     display: block;
     white-space: nowrap;
 }
 
-.mv__catchCopy span+span {
+.mv__catchCopy--sp span+span {
     margin-top: 16px;
 }
 
-.mv__txt {
+.mv__txt--sp {
     position: absolute;
-    top: 510px;
+    top: 567px;
     left: var(--container-padding);
     font-size: 1rem;
     font-weight: 400;
@@ -204,9 +388,9 @@ mv
 /*=============================
 mv＿＿btn
 =============================*/
-.mv__btn {
+.mv__btn--sp {
     position: absolute;   
-    left: 198px;
+    right: 16px;
     bottom: 24px;
 
     z-index: 10;
@@ -223,7 +407,7 @@ mv＿＿btn
     transition: background-color .3s ease, color .3s ease;
 
 }
-.mv__btn--badge {
+.mv__btn--badge--sp {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -241,17 +425,17 @@ mv＿＿btn
 
 
 }
-.mv__btn--txt {
+.mv__btn--txt--sp {
     font-family: "Shippori Mincho";
     font-size: 1.2rem;
     font-weight: 500;
     color:var(--color-btn-green-txt);
     line-height: 1.2;
-    margin: 21px 8px 21px 2px;
+    margin: 21px 8px;
     white-space: nowrap;
 
 }
-.mv__btn--arrow {
+.mv__btn--arrow--sp {
     position: relative;
     width: 7px;
     height: 9px;
@@ -260,50 +444,39 @@ mv＿＿btn
     justify-content: center;
     align-items: center;
 }
-.mv__btn--arrow img {
-    display: block;
+.mv__btn--arrow--sp img {
     max-width: 100%;
-    height: 0;
-
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: auto;   
 }
-.arrow-hover {
-    display: none;
-}
-.mv__btn:hover .arrow-default {
-    display: none;
-}
-.mv__btn:hover .arrow-hover {
+.arrow-default--sp {
     display: block;
 }
 
-.mv__btn:hover {
+.arrow-hover--sp {
+    display: none;
+}
+
+
+.mv__btn--sp:hover .arrow-default--sp {
+    display: none;
+}
+.mv__btn--sp:hover .arrow-hover--sp {
+    display: block;
+}
+
+.mv__btn--sp:hover {
     background-color: var(--color-btn-green-hover);
 
 }
-.mv__btn:hover .mv__btn--txt {
+.mv__btn--sp:hover .mv__btn--txt--sp {
     color: var(--color-btn-green-txt-hover);
 }
-.mv--sp{
-    display: block;
-}
-.mv--pc{
-    display: none;
-}
 
-@media screen and (min-width: 768px) {
-    .mv--sp{
-    display: none;
-}
-    .mv--pc{
-    display: block;
-}    
-}
+
 /*=============================
 problem
 =============================*/
+
 .problem h2 {
     margin-top: 40px;
     text-align: center;
@@ -380,6 +553,25 @@ problem
 
 }
 /*=============================
+problem-pc
+=============================*/
+@media screen and (min-width: 769px) {
+
+.problem h2 {
+    white-space: nowrap;
+    line-height: 1;
+
+    margin-top:var(--section-space);
+
+}
+.problem__list {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 40px;
+}
+}
+/*=============================
 lead
 =============================*/
 .lead__img {
@@ -411,10 +603,7 @@ lead
 /*=============================
 reason
 =============================*/
-.reason .container {
-    max-width: none;
-    padding-inline: 16px;
-}
+
 .pcBr{
     display: none;
 }
@@ -422,17 +611,18 @@ reason
     text-align: center;
     margin-top: 40px;
     white-space: nowrap;
+    padding-inline: 16px;
+}
+.reason__item {
+      position: relative;
+
+      margin-top: 40px;
 }
 .reason__item img {
-    display: block;
-
     width: 100%;
 
-    height: auto;
-
-    margin-top: 32px;
-
-    position: relative;
+    display: block;
+    height: auto; 
 }
 .reason__number {
     font-family: "lora";
@@ -460,9 +650,11 @@ reason
 }
 .reason__content h3 {
     margin-top: 32px;
+    padding-inline: 16px;
 }
 .reason__content p {
     margin-top: 24px;
+    padding-inline: 16px;
 }
 .reason__content h3 {
     white-space: nowrap;
@@ -484,6 +676,7 @@ cta
 }
 .cta__topic {
     width: 100%;
+    text-align: center;
 
 }
 .cta__message {
@@ -500,6 +693,8 @@ cta
 
 }
 .cta__topic h2 {
+    display: inline-block;
+
     font-family: "Shippori Mincho", serif;
     font-weight: 600;
 
@@ -507,7 +702,7 @@ cta
 
     margin-top: 16px;
 
-    width: 100%;
+    
     border-bottom: 1px solid var(--color-content-bg);
     padding-bottom: 16px;
 
@@ -516,13 +711,13 @@ cta
 }
 .cta__img--vegics {
     width: 100%;
-    max-width: 311px;
+    max-width: 343px;
 
     margin-top: 32px;
 }
 .cta__img--kuchibue {
     width: 100%;
-    max-width: 100%;
+    max-width: 343px;
 
     margin-top: 24px;
 }
@@ -551,7 +746,7 @@ cta
     white-space: nowrap;
 }
 .cta__price {
-    margin-top: 8px;
+    margin-top: 16px;
 }
 .cta__price--value {
     font-family: "Noto Sans JP", sans-serif;
@@ -561,14 +756,14 @@ cta
 .cta__tax {
     font-family: "Noto Sans JP", sans-serif;
     line-height: 1;
+    margin-top: 16px;
 }
 .cta__content .cta__farmer {
     font-family: "Noto Sans JP", sans-serif;
     line-height: 1;
+    margin-top: 16px;
 }
-.cta__farmer {
-    margin-top: 8px;
-}
+
 /*=============================
 cta-btn
 =============================*/
@@ -647,12 +842,6 @@ quality
     margin-top: 16px;
 
 }
-.container {
-    width: 343px;
-    margin: 0 auto;
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
-}
 .quality__top {
     position: relative;
     margin-top: 32px;
@@ -683,7 +872,10 @@ quality
 
 }
 .quality__woman {
+    display: block;
+    width: 238px;
     padding-top: 160px;   
+
 }
 .quality__catch {
     font-family: "Shippori Mincho";
@@ -837,6 +1029,7 @@ faq-question
 
     display: flex;
     align-items: center;
+    
 }
 .faq__label {
     display: inline-block;
@@ -862,7 +1055,7 @@ faq-question
     line-height: 1;
 
     margin-left: 32px;
-    margin-right: 108px;
+    margin-right: 96px;
 
 }
 .faq__icon {
@@ -870,6 +1063,10 @@ faq-question
     height: 24px;
 
     flex-shrink: 0;
+
+
+
+    
 
 }
 /*=============================
@@ -921,7 +1118,7 @@ faq-answer
     width: 24px;
     height: 24px;
 
-    margin-right: 10px;
+    margin-right: 20px;
 
 
 }
@@ -943,4 +1140,9 @@ footer
     text-align: center;
     margin: 8px auto 40px; 
 
+}
+.footer__icon {
+    width: 113px;
+    height: auto;
+    display: block;
 }
