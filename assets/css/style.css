@@ -41,7 +41,7 @@
     
     }
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 768px) {
         :root{
             /* pc */
             /* ====font size ==== */
@@ -107,7 +107,7 @@ h3{
     box-sizing: border-box;
 }
 /*=============================
-header
+header-sp
 =============================*/
 .header{
     width: 100%;
@@ -126,16 +126,26 @@ header
 /*=============================
 header-pc
 =============================*/
-@media screen and (min-width: 769px) {
-    .mv--sp{
-    display: none;
-}
-    .mv--pc{
-    display: block;
-    flex: 1;
-}    
+@media screen and (min-width: 768px) {
+    .pc-layout {
+        padding-left: 163px;
+
+    }
+
     .mv--pc .container {
         position: relative;
+        max-width: 1120px;
+        width: 100%;
+
+        margin-left: 180px;
+        margin-inline: auto;
+    }
+
+
+    .mv mv--pc img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
     
     .header--pc {
@@ -145,6 +155,8 @@ header-pc
 
         top: 48px;
         left: 16px;
+
+        width: 168px;
     }
     .header__nav--pc li {
         margin-top: 40px;
@@ -200,7 +212,7 @@ header-pc
 
     }
     /*=============================
-    btn
+    btn-pc
     =============================*/
 
     .mv__btn--pc {
@@ -235,7 +247,7 @@ header-pc
     background-color: #f8f6f2;
 
     font-family: "Shippori Mincho";
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color:var(--color-text);
     line-height: 1.2;
@@ -295,7 +307,7 @@ header-pc
 
 
 /*=============================
-sp-nav
+nav-sp
 =============================*/
 .header__nav {
   background-color:var(--color-bg);
@@ -350,7 +362,7 @@ sp-nav
 }
 
 /*=============================
-mv
+mv-sp
 =============================*/
 .mv.mv--sp {
     position: relative;
@@ -386,7 +398,7 @@ mv
     letter-spacing: 0.03em;
 }
 /*=============================
-mv＿＿btn
+mv＿＿btn-sp
 =============================*/
 .mv__btn--sp {
     position: absolute;   
@@ -474,7 +486,7 @@ mv＿＿btn
 
 
 /*=============================
-problem
+problem-sp
 =============================*/
 
 .problem h2 {
@@ -555,7 +567,7 @@ problem
 /*=============================
 problem-pc
 =============================*/
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
 
 .problem h2 {
     white-space: nowrap;
@@ -569,10 +581,21 @@ problem-pc
     justify-content: center;
 
     margin-top: 40px;
+    gap: 20px;
 }
+.problem__txt {
+    font-size: 2.8rem;
+}
+.spBr {
+    display: none;
+}
+.problem__message {
+    margin: 40px 80px;
+    text-align: center;
+
 }
 /*=============================
-lead
+lead-sp
 =============================*/
 .lead__img {
     position: relative;
@@ -587,6 +610,8 @@ lead
     position: absolute;
     left: 65%;
     transform: translate(-50%,-24%);
+
+    
 }
 .lead__content{
     margin-top: 185px;
@@ -598,10 +623,49 @@ lead
     margin-top: 24px;
     font-size: 1.5rem;
 }
+/*=============================
+lead-pc
+=============================*/
+@media screen and (min-width: 768px) {
+    .lead {
+        margin: 80px 0 160px 0;
+    }
+    .lead__img {
+    position: relative;
+}
+    .lead__farm {
+        width: 669px;
+        max-width: 100%;
+    }
 
+    .lead__vegetable {
+        position: absolute;
+        left: 40px;
+        bottom: -124px;
+
+    }
+    .lead .container {
+        display: flex;
+        gap: 70px;
+    }
+    .lead__content {
+        margin-top: 80px;
+        width: 457px;
+
+        margin-left: 180px;
+    }
+    .lead__content p {
+        font-size: 1.6rem;
+    }
+    .pcBr {
+        display: none;
+    }
+
+
+}
 
 /*=============================
-reason
+reason-sp
 =============================*/
 
 .pcBr{
@@ -659,11 +723,91 @@ reason
 .reason__content h3 {
     white-space: nowrap;
 }
+/*=============================
+reason-pc
+=============================*/
+@media screen and (min-width: 768px) {
+    .reason {
+        margin: 80px 0 80px 0;
+    }
+    .reason h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+     .reason h2::before,
+     .reason h2::after {
+        content: '';
+        height: 1px;
+        background: var(--color-text);
+     }
+    .reason h2::before {
+        width: 260px;
+    }
+    .reason h2::after {
+        width: 360px;
+    }
+    .reason__item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
 
+        max-width: 1120px;
+        margin-inline: auto;
+    }
+    .reason__img {
+        width: 600px;
+        flex-shrink: 0;
+    }
+    .reason__img img {
+        width: 100%;
+        display: block;
+    }
+    .reason__item:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    .reason__item {
+        position: relative;
+    }
+    .reason__number {
+        position: absolute;
 
+        width: 163px;
+        aspect-ratio: 1;
+
+        font-size: 4.8rem;
+    }
+
+    .reason__item:nth-child(odd) .reason__number {
+        left: 483px;
+        top: -18px;
+    }
+    .reason__item:nth-child(even) .reason__number {
+        left: -38px;
+        top: -13px;
+    }
+    .reason__item:nth-child(even) .reason__img {
+        margin-right: 24px;
+
+    }
+    .reason__item:nth-child(odd) .reason__content {
+        margin-right: 24px;
+    }
+
+    .reason__content h3 {
+        margin-top: 50px;
+    }
+    .reason__content p {
+        line-height: 2;
+
+        margin-top: 32px;
+    }
+
+}
 
 /*=============================
-cta
+cta-sp
 =============================*/
 .cta {
     margin-top: 40px;
@@ -765,7 +909,7 @@ cta
 }
 
 /*=============================
-cta-btn
+cta-btn-sp
 =============================*/
 .cta__btn {
     display:flex;
@@ -818,8 +962,76 @@ cta-btn
 .cta__btn:hover {
     background-color: var(--color-btn-orange-hover);
 }
+
 /*=============================
-quality
+cta-pc
+=============================*/
+@media screen and (min-width: 768px) {
+    .cta {
+        padding: 80px 0 80px 0;
+    }
+
+    .pcBr {
+        display: none;
+    }
+    .cta__topic h2 {
+        border-bottom: 1px solid var(--color-content-bg);
+        padding-bottom: 24px;
+    }
+    .cta__cards {
+        text-align: center;
+
+        margin-top: 40px;
+    }
+    .cta__img--vegics,
+    .cta__img--kuchibue {
+        width: 100%;
+        max-width: 550px;
+        margin-top: 32px;
+    }
+    .cta__content {
+        max-width: 550px;
+        margin: 0 auto;
+
+    }
+    .cta .container {
+        display: flex;
+        gap: 20px;
+    }
+    .cta__btn--arrow {
+    width: 20px;
+    height: 15px;
+}
+
+}
+/*=============================
+cta-btn-pc
+=============================*/
+@media screen and (min-width: 768px) {
+.cta__btn {
+    margin: 24px auto 0;
+
+    width: 400px;
+    height: 110px;
+}
+.cta__btn--badge {
+    width: 80px;
+    height: 80px;
+    font-size: 1.6rem;
+}
+.cta__btn--txt {
+    font-size: 2.4rem;
+    color:var(--color-btn-orange-txt);
+
+    margin: 40px 64px 40px 40px;
+
+    white-space: nowrap;
+}
+
+}
+
+/*=============================
+quality-sp
 =============================*/
 
 .quality__topic--txt {
@@ -933,8 +1145,102 @@ quality
 .quality__last {
     padding-bottom: 40px;
 }
+.quality__line {
+    display: none;
+}
 /*=============================
-farmer
+quality-pc
+=============================*/
+@media screen and (min-width: 768px) {
+
+.quality {
+    margin: 80px 0 80px 0;
+}
+.quality__topic--txt {
+    font-size: 2rem;
+}
+.quality__topic {
+    font-size: var(--fs-h2);
+}
+.quality__inner {
+    width: 1120px;
+    margin: 0 auto;
+
+    margin-top: 40px;
+}
+
+.quality__woman {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    width: 261px;
+    padding-top: 0;
+}
+.quality__top {
+    padding: 128px;
+}
+.quality__balloon img {
+    width: 226px;
+    position: absolute;
+
+    top: 195px;
+    left: 316px;
+
+}
+
+.quality__balloon p {
+    position: absolute;
+
+    top: 192px;
+    left: 316px;
+
+}
+.quality__line {
+    display: block;
+    width: 1px;
+    height: 197px;
+    border-left: 1px solid var(--color-text);
+    position: absolute;
+    top: 136px;
+    left: 706px;
+    
+}
+.quality__message {
+    position: absolute;
+
+    top: 137px;
+    left: 799px;
+}
+.quality__catch {
+    font-size: 2.8rem;
+}
+.quality__catchTxt {
+    font-size: 2rem;
+}
+.quality__emphasis {
+    font-size: 4rem;
+}
+.quality__refund {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+.quality__content {
+    width: 1120px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.quality__txt p {
+    font-size: 1.8rem;
+}
+.quality__img img {
+    width: 389px;
+}
+}
+
+/*=============================
+farmer-sp
 =============================*/
 .farmers__topic--txt {
     font-family: "Shippori Mincho";
@@ -978,13 +1284,105 @@ farmer
 }
 .farmers__txt {
     margin-top: 16px;
+    grid-row: 4;
 
 }
 .farmers__txt-last {
     margin-block: 16px 40px;
 }
+.farmers__box {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.farmers__title {
+    grid-row: 1;
+}
+.farmers__img {
+    grid-row: 2;
+}
+.farmers__name {
+    grid-row: 3;
+}
+
 /*=============================
-faq-question
+farmer-pc
+=============================*/
+@media screen and (min-width: 768px) {
+    .farmers {
+        margin: 80px 0 80px 0;
+    }
+    .farmers__topic--txt {
+        font-size: 2rem;
+    }
+    .farmers__vegetable {
+        display: none;
+    }
+    
+    .farmers__img {
+        width: 520px;
+
+        grid-column: 1;
+        grid-row: 1 / 4;
+    }
+    .farmers__content {
+        width: 520px;
+    }
+    .farmers__box {
+        display: grid;
+        grid-template-columns: 520px 1fr;
+        column-gap: 80px;
+        align-items: start;
+    }
+    .farmers__item:last-child .farmers__box {
+        flex-direction: row-reverse;
+
+    }
+    .farmers__title {
+        margin-bottom: 32px;
+        line-height: 1.3;   
+
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .farmers__title--first {
+        width: calc(520px + 80px + 520px);
+        margin-left: auto;
+        text-align: left;
+    }
+    .farmers__title--second {
+        width: calc(520px + 80px + 520px);
+        margin-left: auto;
+        text-align: left;
+    }
+    .farmers__box {
+        align-items: center;
+    }
+    .farmers__item:last-child .farmers__box  {
+        flex-direction: row-reverse;
+    }
+    .farmers__name {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .farmers__txt {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    
+    }
+    
+
+
+
+
+}
+
+
+
+
+
+/*=============================
+faq-question-sp
 =============================*/
 .faq {
     text-align: center;
@@ -1062,24 +1460,16 @@ faq-question
     width: 24px;
     height: 24px;
 
-    flex-shrink: 0;
-
-
-
-    
-
+    flex-shrink: 0;   
 }
 /*=============================
-faq-answer
+faq-answer-sp
 =============================*/
 .faq__answer {
     width: 100%;
     display:flex;
     align-items: flex-start;
     gap: 24px;
-
-    
-
     background: var(--color-btn-orange);
 
     margin-top: 24px;
@@ -1087,9 +1477,11 @@ faq-answer
 
     display: none;
 }
+
 .faq__body {
     flex: 1;
 }
+
 .faq__head {
     display: flex;
     align-items: baseline;
@@ -1120,11 +1512,9 @@ faq-answer
 
     margin-right: 20px;
 
-
 }
-
 /*=============================
-footer
+footer-sp
 =============================*/
 .footer__group img {
     display: block;
