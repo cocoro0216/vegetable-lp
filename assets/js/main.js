@@ -25,8 +25,16 @@ gsap.from(".mv__txt--sp", {
 
 // CTA
 
-gsap.from(".mv__btn", {
+gsap.from(".mv__btn--sp", {
   scrollTrigger: ".mv__btn--sp" ,
+  opacity: 0,
+  y: 40,
+  duration: 0.8,
+  ease: "power2.out"
+
+});
+gsap.from(".mv__btn--pc", {
+  scrollTrigger: ".mv__btn--pc" ,
   opacity: 0,
   y: 40,
   duration: 0.8,

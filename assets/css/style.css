@@ -109,6 +109,10 @@ h3{
 /*=============================
 header-sp
 =============================*/
+.header--pc {
+    display: none;
+}
+
 .header{
     width: 100%;
     padding-block: 24px;
@@ -118,18 +122,35 @@ header-sp
     justify-content: space-between;
     align-items: center;
 }
+.header__logo img {
+    width: 24px;
+}
 .header__logo .header__icon {
     width: 113px;
     height: auto;
     display: block;
 }
+.pc-layout {
+    display: none;
+}
+
 /*=============================
 header-pc
 =============================*/
 @media screen and (min-width: 768px) {
     .pc-layout {
+        display: block;
         padding-left: 163px;
+    }
 
+    .header--sp {
+    display: none;
+}
+    .header--pc {
+    display: block;
+}
+    .header--pc .header__logo img {
+        width: 143px;
     }
 
     .mv--pc .container {
@@ -137,13 +158,12 @@ header-pc
         max-width: 1120px;
         width: 100%;
 
-        margin-left: 180px;
-        margin-inline: auto;
+        margin-left: 8px;
+        margin-right: auto;
     }
 
 
-    .mv mv--pc img {
-        width: 100%;
+    .mv--pc img {
         height: auto;
         display: block;
     }
@@ -208,9 +228,14 @@ header-pc
         line-height: 1;
         letter-spacing: 0.03em;
 
-
-
     }
+    .header__nav--pc {
+        margin-top: 80px;
+    }
+    .header__nav--pc li + li {
+        margin-top: 40px;
+    }
+
     /*=============================
     btn-pc
     =============================*/
@@ -247,7 +272,7 @@ header-pc
     background-color: #f8f6f2;
 
     font-family: "Shippori Mincho";
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 400;
     color:var(--color-text);
     line-height: 1.2;
@@ -278,7 +303,10 @@ header-pc
     top: -3px;
     left: 0;
 }
-.arrow-hover {
+.mv__btn--arrowPc .arrow-default {
+    display: block;
+}
+.mv__btn--arrowPc .arrow-hover {
     display: none;
 }
 .mv__btn--pc:hover .arrow-default {
@@ -364,6 +392,7 @@ nav-sp
 /*=============================
 mv-sp
 =============================*/
+
 .mv.mv--sp {
     position: relative;
 }
@@ -569,12 +598,15 @@ problem-pc
 =============================*/
 @media screen and (min-width: 768px) {
 
+
+
+.problem {
+    margin-top: 80px;
+}
+
 .problem h2 {
     white-space: nowrap;
     line-height: 1;
-
-    margin-top:var(--section-space);
-
 }
 .problem__list {
     display: flex;
@@ -590,13 +622,23 @@ problem-pc
     display: none;
 }
 .problem__message {
-    margin: 40px 80px;
+    margin: 40px;
     text-align: center;
 
 }
+
+}
+
+
 /*=============================
 lead-sp
 =============================*/
+.lead--pc {
+    display: none;
+}
+.lead--sp {
+    display: block;
+} 
 .lead__img {
     position: relative;
 }
@@ -623,44 +665,54 @@ lead-sp
     margin-top: 24px;
     font-size: 1.5rem;
 }
+
+
+
 /*=============================
 lead-pc
 =============================*/
 @media screen and (min-width: 768px) {
+    .lead--sp {
+    display: none;
+   }
+   .lead--pc {
+    display: block;
+   }
     .lead {
-        margin: 80px 0 160px 0;
+        margin-top: 80px;
     }
     .lead__img {
     position: relative;
+    
 }
-    .lead__farm {
-        width: 669px;
-        max-width: 100%;
-    }
-
-    .lead__vegetable {
-        position: absolute;
-        left: 40px;
-        bottom: -124px;
-
-    }
-    .lead .container {
+    .lead--pc .container {
         display: flex;
-        gap: 70px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
     }
     .lead__content {
         margin-top: 80px;
         width: 457px;
-
-        margin-left: 180px;
     }
+    .lead--pc .lead__farm {
+        display: block;
+        width: 670px;
+        max-width: 100%;
+        margin-left: 53px;
+    }
+    .lead--pc .lead__vegetable {
+        position: absolute;
+        left: 92px;
+        bottom: -168px;
+    }
+    
     .lead__content p {
         font-size: 1.6rem;
     }
     .pcBr {
         display: none;
     }
-
 
 }
 
@@ -728,13 +780,15 @@ reason-pc
 =============================*/
 @media screen and (min-width: 768px) {
     .reason {
-        margin: 80px 0 80px 0;
+        margin-top: 160px;
     }
     .reason h2 {
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 32px;
+        width: 100%;
+        max-width: 1120px;
+        margin-inline: auto;
     }
      .reason h2::before,
      .reason h2::after {
@@ -744,9 +798,11 @@ reason-pc
      }
     .reason h2::before {
         width: 260px;
+        flex: 1.7;
     }
     .reason h2::after {
         width: 360px;
+        flex: 1.3;
     }
     .reason__item {
         display: flex;
@@ -755,6 +811,8 @@ reason-pc
 
         max-width: 1120px;
         margin-inline: auto;
+
+        margin-top: 64px;
     }
     .reason__img {
         width: 600px;
@@ -802,6 +860,9 @@ reason-pc
         line-height: 2;
 
         margin-top: 32px;
+    }
+    .reason__item:last-child{
+        margin-bottom: 80px;
     }
 
 }
@@ -958,6 +1019,9 @@ cta-btn-sp
     justify-content: center;
     align-items: center;
     margin-right: 8px;
+
+    position: relative;
+    top: -3px;
 }
 .cta__btn:hover {
     background-color: var(--color-btn-orange-hover);
@@ -974,6 +1038,9 @@ cta-pc
     .pcBr {
         display: none;
     }
+    .cta__message {
+        font-size: 2rem;
+    }
     .cta__topic h2 {
         border-bottom: 1px solid var(--color-content-bg);
         padding-bottom: 24px;
@@ -982,6 +1049,28 @@ cta-pc
         text-align: center;
 
         margin-top: 40px;
+    }
+    .cta__content p {
+        font-size: 1.8rem;
+
+        margin-top: 24px;
+    }
+    .cta__content h3 {
+        font-size: var(--fs-h2);
+    }
+    .cta__price--value {
+        font-size: 6rem;
+        line-height: 1.4;
+
+        margin-top: 8px;
+    }
+    .cta__tax {
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+    .cta__farmer {
+        font-size: 1.6rem;
+        margin-top: 8px;
     }
     .cta__img--vegics,
     .cta__img--kuchibue {
@@ -998,10 +1087,7 @@ cta-pc
         display: flex;
         gap: 20px;
     }
-    .cta__btn--arrow {
-    width: 20px;
-    height: 15px;
-}
+    
 
 }
 /*=============================
@@ -1029,6 +1115,7 @@ cta-btn-pc
 }
 
 }
+
 
 /*=============================
 quality-sp
@@ -1109,6 +1196,14 @@ quality-sp
     margin-top: 24px;
 
 }
+.quality__refund {
+    text-align: center;
+}
+.quality__company {
+    font-family: "Shippori Mincho";
+    line-height: 1;
+
+}
 .quality__emphasis {
     font-family: "Shippori Mincho";
     font-size: 3.6rem;
@@ -1154,10 +1249,11 @@ quality-pc
 @media screen and (min-width: 768px) {
 
 .quality {
-    margin: 80px 0 80px 0;
+    margin-top: 80px;
 }
 .quality__topic--txt {
     font-size: 2rem;
+    text-align: center;
 }
 .quality__topic {
     font-size: var(--fs-h2);
@@ -1209,7 +1305,8 @@ quality-pc
     position: absolute;
 
     top: 137px;
-    left: 799px;
+    left: 706px;
+    margin-left: 63px;
 }
 .quality__catch {
     font-size: 2.8rem;
@@ -1231,11 +1328,16 @@ quality-pc
     display: flex;
     flex-direction: row-reverse;
 }
-.quality__txt p {
+.quality__txt  {
     font-size: 1.8rem;
+    line-height: 1.6;
+
+    margin: 40px 24px 40px 73px;
 }
 .quality__img img {
     width: 389px;
+
+    margin: 13px 19px 0 0;
 }
 }
 
@@ -1291,96 +1393,88 @@ farmer-sp
     margin-block: 16px 40px;
 }
 .farmers__box {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.farmers__title {
-    grid-row: 1;
+    display: block;
 }
 .farmers__img {
-    grid-row: 2;
+    margin-top: 24px;
 }
-.farmers__name {
-    grid-row: 3;
+.farmers__content {
+    margin-top: 24px;
+}
+.farmers--pc {
+    display: none;
 }
 
+ 
 /*=============================
 farmer-pc
 =============================*/
 @media screen and (min-width: 768px) {
     .farmers {
-        margin: 80px 0 80px 0;
+        display: none;
     }
-    .farmers__topic--txt {
-        font-size: 2rem;
+    .farmers--pc {
+        display: block;
+
+        margin-top: 80px;
+    }
+    .farmers__subTitle {
+        text-align: center;
+        
+    }
+    .farmers__title {
+        text-align: center;
+
+        margin-top: 16px;
+        
+    }
+    .farmers__catch {
+        text-align: center;
+    }
+    .farmers__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .farmers__img {
+        width: 520px;
+        flex-shrink: 0;
+    }
+    .farmers__content {
+        flex: 1;
+    }
+    .farmers__item--reverse .farmers__box {
+        flex-direction: row-reverse;
     }
     .farmers__vegetable {
         display: none;
-    }
-    
-    .farmers__img {
-        width: 520px;
+    } 
+    .farmers__item img {
+        display: block;
 
-        grid-column: 1;
-        grid-row: 1 / 4;
-    }
-    .farmers__content {
-        width: 520px;
-    }
-    .farmers__box {
-        display: grid;
-        grid-template-columns: 520px 1fr;
-        column-gap: 80px;
-        align-items: start;
-    }
-    .farmers__item:last-child .farmers__box {
-        flex-direction: row-reverse;
+        width: 100%;
+        max-width: 450px;
+
+        height: auto;
 
     }
-    .farmers__title {
-        margin-bottom: 32px;
-        line-height: 1.3;   
-
-        grid-column: 2;
-        grid-row: 1;
-    }
-    .farmers__title--first {
-        width: calc(520px + 80px + 520px);
-        margin-left: auto;
-        text-align: left;
-    }
-    .farmers__title--second {
-        width: calc(520px + 80px + 520px);
-        margin-left: auto;
-        text-align: left;
-    }
-    .farmers__box {
-        align-items: center;
-    }
-    .farmers__item:last-child .farmers__box  {
-        flex-direction: row-reverse;
-    }
-    .farmers__name {
-        grid-column: 2;
-        grid-row: 2;
+    .farmers__item h3 {
+    text-align: left;
+}
+    .farmers__content p {
+        margin-top: 16px;
     }
     .farmers__txt {
-        grid-column: 2;
-        grid-row: 3;
+        margin-top: 32px;
+    }
+    .farmers__box:last-child {
+        margin-bottom: 80px;
+    }
+
+
     }
     
-    }
-    
-
-
-
-
-}
-
-
-
-
-
 /*=============================
 faq-question-sp
 =============================*/
@@ -1514,6 +1608,88 @@ faq-answer-sp
 
 }
 /*=============================
+faq-question-pc
+=============================*/
+@media screen and (min-width: 768px) {
+    .faq {
+        margin-top: 80px;
+
+    }
+        
+    .faq__headingTxt {
+        font-size: 20px;
+    }
+    .faq__item {
+        width: 930px;
+        height: auto;
+        margin: 40px auto;
+    }
+    .faq__question {
+        justify-content: space-between;
+
+        padding: 32px;
+    }
+    .faq__label {
+        font-size: 3.2rem;
+        margin-left: 56px;
+    }
+    .faq__txt,
+    .faq__secondTxt {
+        font-size: 2.4rem;
+    }
+    .faq__icon {
+        margin-right: 56px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .faq__icon img {
+        width: 48px;
+        height: 48px;
+    }
+    .faq__item:last-child {
+        margin-bottom: 80px;
+    }
+        
+
+
+    .spBr {
+        display: none;
+    }
+
+}
+/*=============================
+faq-answer-pc
+=============================*/
+@media screen and (min-width: 768px) {
+    .faq__answer {
+        width: 930px;
+        padding: 48px 40px 48px 48px;
+    }
+    .faq__answer:last-child {
+        padding: 48px 32px 48px 40px;
+    }
+    .spBr {
+        display: none;
+    }
+    .pcBr {
+        display: block;
+    }
+    .faq__head {
+        gap: 111px;
+    }
+    .faq__content {
+        gap: 64px;
+    }
+    .faq__content .faq__label {
+        margin-left: 56px;
+    }
+
+
+}
+
+/*=============================
 footer-sp
 =============================*/
 .footer__group img {
@@ -1536,3 +1712,17 @@ footer-sp
     height: auto;
     display: block;
 }
+/*=============================
+footer-pc
+=============================*/
+@media screen and (min-width: 768px){
+    .footer__icon {
+        width: 143px;
+    }
+    .footer__txt {
+        font-size: 1.6rem;
+    }
+
+}
+
+
