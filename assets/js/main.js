@@ -34,7 +34,7 @@ gsap.from(".mv__btn--sp", {
 
 });
 gsap.from(".mv__btn--pc", {
-  scrollTrigger: ".mv__btn--pc" ,
+  scrollTrigger: ".mv__btn--sp" ,
   opacity: 0,
   y: 40,
   duration: 0.8,
@@ -42,14 +42,14 @@ gsap.from(".mv__btn--pc", {
 
 });
 
-gsap.from(".cta__btn", {
-  scrollTrigger: ".cta__btn",
-  opacity: 0,
-  y: 40,
-  duration: 0.8,
-  ease: "power2.out"
+// gsap.from(".cta__btn", {
+//   scrollTrigger: ".cta__btn",
+//   opacity: 0,
+//   y: 40,
+//   duration: 0.8,
+//   ease: "power2.out"
 
-});
+// });
 
 // problem
 gsap.from(".problem", {

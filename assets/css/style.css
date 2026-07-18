@@ -134,13 +134,20 @@ header-sp
     display: none;
 }
 
+
 /*=============================
 header-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1450px){
+
     .pc-layout {
         display: block;
-        padding-left: 163px;
+        width: calc(100% - 184px);
+        background: url(../images/pc/mv-pc.jpg);
+        height: 702px;
+
+        margin-left: auto;
+
     }
 
     .header--sp {
@@ -154,7 +161,6 @@ header-pc
     }
 
     .mv--pc .container {
-        position: relative;
         max-width: 1120px;
         width: 100%;
 
@@ -163,10 +169,7 @@ header-pc
     }
 
 
-    .mv--pc img {
-        height: auto;
-        display: block;
-    }
+    
     
     .header--pc {
         flex: 0 0 147px;
@@ -194,17 +197,16 @@ header-pc
     }
     
     .mv__catchCopy--pc {
-    position: absolute;
-
+    
     display: block;
     white-space: nowrap;
 
-    top: 496px;
-    left: 40px;
 
     letter-spacing: 0.03em;
 
     line-height: 1.2;
+
+    padding-top: 475px;
 
 
     }
@@ -219,14 +221,13 @@ header-pc
 
 
     .mv__txt--pc {
-        position: absolute;
-        top: 656px;
-        left: 40px;
-
+        
         font-size: 1.6rem;
         color: #fdfbf7;
         line-height: 1;
         letter-spacing: 0.03em;
+
+        padding-top: 22px;
 
     }
     .header__nav--pc {
@@ -235,16 +236,26 @@ header-pc
     .header__nav--pc li + li {
         margin-top: 40px;
     }
+    
+}
+
 
     /*=============================
     btn-pc
     =============================*/
+    @media screen and (min-width: 768px) and (max-width: 1450px) {
 
-    .mv__btn--pc {
-        position: absolute;   
-        left: 984px;
-        bottom: 24px;
+        .mv--btnPc {
+            margin-bottom: 24px;
 
+        }
+
+        .mv__btn--pc {
+
+        margin-left: 931px;
+        margin-top: -74px;
+    
+    
         z-index: 10;
 
         display: flex;
@@ -257,6 +268,8 @@ header-pc
         padding: 16px;
 
         transition: background-color .3s ease, color .3s ease;
+
+
 
 
     }
@@ -329,10 +342,8 @@ header-pc
 .mv--pc{
     display: block;
 }
-    
-}
 
-
+    }
 
 /*=============================
 nav-sp
@@ -596,12 +607,11 @@ problem-sp
 /*=============================
 problem-pc
 =============================*/
-@media screen and (min-width: 768px) {
-
-
+@media screen and (min-width: 768px) and (max-width: 1450px){
 
 .problem {
     margin-top: 80px;
+
 }
 
 .problem h2 {
@@ -626,8 +636,14 @@ problem-pc
     text-align: center;
 
 }
+.problem .container {
+        padding-left: 168px;
+    }
 
 }
+
+
+
 
 
 /*=============================
@@ -671,7 +687,7 @@ lead-sp
 /*=============================
 lead-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1450px) {
     .lead--sp {
     display: none;
    }
@@ -713,6 +729,10 @@ lead-pc
     .pcBr {
         display: none;
     }
+    .lead--pc .container {
+            padding-left: 168px;
+        }
+
 
 }
 
@@ -778,7 +798,7 @@ reason-sp
 /*=============================
 reason-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1450px) {
     .reason {
         margin-top: 160px;
     }
@@ -864,6 +884,9 @@ reason-pc
     .reason__item:last-child{
         margin-bottom: 80px;
     }
+    .reason {
+        padding-left: 168px;
+    }
 
 }
 
@@ -874,6 +897,7 @@ cta-sp
     margin-top: 40px;
     padding-bottom: 40px;
     background: url(../images/sp/cta-bg.jpg);
+    background-size: cover;
 }
 .cta__card {
     width: 100%;
@@ -889,7 +913,7 @@ cta-sp
     font-size: 1.6rem;
     font-weight: 400;
     color:var(--heading-section);
-    line-height: 1;
+    line-height: 1.2;
     letter-spacing: 0.03em;
 
     text-align: center;
@@ -1021,7 +1045,7 @@ cta-btn-sp
     margin-right: 8px;
 
     position: relative;
-    top: -3px;
+    top: -6px;
 }
 .cta__btn:hover {
     background-color: var(--color-btn-orange-hover);
@@ -1030,9 +1054,11 @@ cta-btn-sp
 /*=============================
 cta-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1450px) {
     .cta {
         padding: 80px 0 80px 0;
+        background: url(../images/pc/cta-pc.jpg);
+        background-size: cover;
     }
 
     .pcBr {
@@ -1056,7 +1082,7 @@ cta-pc
         margin-top: 24px;
     }
     .cta__content h3 {
-        font-size: var(--fs-h2);
+        font-size: var(--fs-h3);
     }
     .cta__price--value {
         font-size: 6rem;
@@ -1087,13 +1113,15 @@ cta-pc
         display: flex;
         gap: 20px;
     }
+    .cta {
+        padding-left: 168px;
+    }
     
-
 }
 /*=============================
 cta-btn-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1450px) {
 .cta__btn {
     margin: 24px auto 0;
 
@@ -1141,15 +1169,15 @@ quality-sp
     margin-top: 16px;
 
 }
+.quality__inner .container {
+    padding-inline: 0;
+}
 .quality__top {
     position: relative;
     margin-top: 32px;
-}
-.quality__inner {
     background-color: #f5f1e8;
-    width: 100vw;
-    margin-left: calc(50% -50vw);
 }
+
 .quality__balloon img {
     display: block;
 
@@ -1246,11 +1274,19 @@ quality-sp
 /*=============================
 quality-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1450px) {
 
 .quality {
     margin-top: 80px;
 }
+.quality .container {
+    display: flex;
+    align-items: center;
+}
+.quality__contents {
+    margin: 0 auto;
+}
+
 .quality__topic--txt {
     font-size: 2rem;
     text-align: center;
@@ -1259,55 +1295,65 @@ quality-pc
     font-size: var(--fs-h2);
 }
 .quality__inner {
+    
     width: 1120px;
     margin: 0 auto;
 
     margin-top: 40px;
+
+    background-color: #f5f1e9;
 }
 
 .quality__woman {
-    position: absolute;
-    bottom: 0;
-    left: 80px;
     width: 261px;
-    padding-top: 0;
+    display: block;
+
+    padding-top: 24px;
+
 }
+
 .quality__top {
-    padding: 128px;
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+
+    padding-left: 80px;
 }
 .quality__balloon img {
     width: 226px;
+
     position: absolute;
 
-    top: 195px;
-    left: 316px;
+    top: 145px;
+    left: 316px;   
+}
+.quality__line {
+    display: block;
 
+    width: 1px;
+    height: 197px;
+
+    background: var(--color-text);
+
+    margin-left: 159px;
+    margin-right: 32px;
+}
+.quality__message {
+    margin-left: 48px;
+}
+.quality__balloon {
+    display: flex;
 }
 
 .quality__balloon p {
     position: absolute;
 
-    top: 192px;
+    top: 145px;
     left: 316px;
 
 }
-.quality__line {
-    display: block;
-    width: 1px;
-    height: 197px;
-    border-left: 1px solid var(--color-text);
-    position: absolute;
-    top: 136px;
-    left: 706px;
-    
-}
-.quality__message {
-    position: absolute;
 
-    top: 137px;
-    left: 706px;
-    margin-left: 63px;
-}
+
 .quality__catch {
     font-size: 2.8rem;
 }
@@ -1339,7 +1385,11 @@ quality-pc
 
     margin: 13px 19px 0 0;
 }
+.quality {
+        padding-left: 168px;
+    }
 }
+
 
 /*=============================
 farmer-sp
@@ -1409,7 +1459,7 @@ farmer-sp
 /*=============================
 farmer-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1450px)  {
     .farmers {
         display: none;
     }
@@ -1471,9 +1521,13 @@ farmer-pc
     .farmers__box:last-child {
         margin-bottom: 80px;
     }
+    .farmers--pc .container {
+        padding-left: 168px;
+    }
 
 
     }
+    
     
 /*=============================
 faq-question-sp
@@ -1533,7 +1587,7 @@ faq-question-sp
 }
 .faq__txt {
     color:var(--heading-section);
-    line-height: 1;
+    line-height: 1.2;
 
 
     margin-left: 24px;
@@ -1610,7 +1664,7 @@ faq-answer-sp
 /*=============================
 faq-question-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px)and (max-width: 1450px){
     .faq {
         margin-top: 80px;
 
@@ -1659,10 +1713,11 @@ faq-question-pc
     }
 
 }
+
 /*=============================
 faq-answer-pc
 =============================*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px)and (max-width: 1450px)  {
     .faq__answer {
         width: 930px;
         padding: 48px 40px 48px 48px;
@@ -1685,9 +1740,11 @@ faq-answer-pc
     .faq__content .faq__label {
         margin-left: 56px;
     }
-
-
+    .faq {
+        padding-left: 168px;
+    }
 }
+
 
 /*=============================
 footer-sp
@@ -1712,6 +1769,7 @@ footer-sp
     height: auto;
     display: block;
 }
+
 /*=============================
 footer-pc
 =============================*/
